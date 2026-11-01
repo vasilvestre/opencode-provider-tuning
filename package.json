@@ -1,6 +1,6 @@
 {
   "name": "@vasilvestre/opencode-provider-tuning",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Patient retries, cheaper auxiliary calls, and local titles for OpenCode v2.",
   "keywords": [
     "opencode",

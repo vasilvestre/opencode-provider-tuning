@@ -23,6 +23,12 @@ jobs:
           node-version: 22
           registry-url: https://registry.npmjs.org
 
+      # Trusted publishing: npm exchanges this job's OIDC token for a
+      # short-lived publish token. A NPM_TOKEN secret would win over it and
+      # fail with a 404.
+      - name: Use the latest npm
+        run: npm install -g npm@latest
+
       - name: Read the version
         id: local
         run: echo "version=$(node -p "require('./package.json').version")" >> "$GITHUB_OUTPUT"
@@ -48,6 +54,4 @@ jobs:
 
       - name: Publish
         if: steps.local.outputs.version != steps.published.outputs.version
-        run: |
-          npm install -g npm@latest
-          npm publish --provenance --access public
+        run: npm publish --access public
