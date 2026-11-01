@@ -1,0 +1,44 @@
+{
+  "name": "@vasilvestre/opencode-provider-tuning",
+  "version": "0.1.0",
+  "description": "Patient retries, cheaper auxiliary calls, and local titles for OpenCode v2.",
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "rate-limit",
+    "retry",
+    "tokens"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "vasilvestre",
+    "url": "https://github.com/vasilvestre"
+  },
+  "homepage": "https://github.com/vasilvestre/opencode-provider-tuning",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vasilvestre/opencode-provider-tuning.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vasilvestre/opencode-provider-tuning/issues"
+  },
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test index.test.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
